@@ -138,8 +138,8 @@ def search_lock(target, algo):
             cv2.imshow("Target-detected", result_flann)
 
             
-            queryPoints = np.float32([keypoints[i.queryIdx].pt for i in goodMatches_flann]).reshape(-1, 1, 2)   # extracting location of good matches from targeted image
-            trainPoints = np.float32([keypoints_grayFrame[j.trainIdx].pt for j in goodMatches_flann]).reshape(-1, 1, 2) # extracting location of good matches from real time vision
+            queryPoints = np.float32([keypoints[i.queryIdx].pt for i in goodMatches_flann]).reshape(-1, 1, 2)   
+            trainPoints = np.float32([keypoints_grayFrame[j.trainIdx].pt for j in goodMatches_flann]).reshape(-1, 1, 2) 
             
             targetPoints= trainPoints
 
@@ -186,9 +186,8 @@ def search_lock(target, algo):
 
                 img = cv2.add(frame3,maskk)
                 img= cv2.rectangle(img, (100,95), (250,175),(255,0, 0), 2)
-                img= cv2.rectangle(img, (120,115), (230,155),(0,255, 0), 2)    #(0,10), (350,275)
+                img= cv2.rectangle(img, (120,115), (230,155),(0,255, 0), 2)    
                 cv2.imshow('frame',img)
-                # Now update the previous frame and previous points
                 grayFrame = newGrayFrame.copy()
                 targetPoints = good_new.reshape(-1,1,2)
                 if cv2.waitKey(1) == 27:
@@ -214,7 +213,7 @@ print (" Velocity: %s" % vehicle.velocity)
 print (" Last Heartbeat: %s" % vehicle.last_heartbeat)
 print (" Is Armable?: %s" % vehicle.is_armable)
 print (" System status: %s" % vehicle.system_status.state)
-print (" Mode: %s" % vehicle.mode.name)    # settable
+print (" Mode: %s" % vehicle.mode.name)    
 
 cmds = vehicle.commands
 cmds.download()
