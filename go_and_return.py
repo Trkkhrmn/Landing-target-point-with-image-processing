@@ -72,7 +72,7 @@ print (" Velocity: %s" % vehicle.velocity)
 print (" Last Heartbeat: %s" % vehicle.last_heartbeat)
 print (" Is Armable?: %s" % vehicle.is_armable)
 print (" System status: %s" % vehicle.system_status.state)
-print (" Mode: %s" % vehicle.mode.name)    # settable
+print (" Mode: %s" % vehicle.mode.name)    
 
 cmds = vehicle.commands
 cmds.download()
