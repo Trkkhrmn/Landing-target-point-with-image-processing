@@ -7,7 +7,6 @@ from pymavlink import mavutil
 
 target1 = cv2.imread("C:/Users/KAHRAMAN/Desktop/drone/VEFA_logo.png", cv2.IMREAD_GRAYSCALE)
 target2 = cv2.imread("C:/Users/KAHRAMAN/Desktop/drone/YTU_logo.png", cv2.IMREAD_GRAYSCALE)
-target3 = cv2.imread("C:/Users/KAHRAMAN/Desktop/drone/ORT_logo.png", cv2.IMREAD_GRAYSCALE)
 target4 = cv2.imread("C:/Users/KAHRAMAN/Desktop/drone/LAND_logo.png", cv2.IMREAD_GRAYSCALE)
 home = cv2.imread("C:/Users/KAHRAMAN/Desktop/drone/TR_flag.png", cv2.IMREAD_GRAYSCALE)
 
